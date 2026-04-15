@@ -23,19 +23,15 @@ export type ClientHistoryEntry = {
   date: string;
 };
 
-export type ScheduleStatus =
-  | 'Trabalhando'
-  | 'Folga'
-  | 'Banco de horas'
-  | 'Sobreaviso'
-  | 'Atestado'
-  | 'Férias';
+export type ScheduleStatus = 'Trabalhando' | 'Folga' | 'Férias' | 'Afastado';
+
+export type CollaboratorRegion = 'CWB' | 'JOI' | 'SLZ';
 
 export type Collaborator = {
   id: string;
   name: string;
   supervisor: string;
-  region: string;
+  region: CollaboratorRegion;
   role: string;
   phone: string;
   shiftStart: string;

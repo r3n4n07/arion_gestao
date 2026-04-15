@@ -25,14 +25,12 @@ export function ScheduleEditPage() {
       <Card title="Aplicação em lote" description="Selecione colaboradores e aplique o status no dia desejado.">
         <div className="grid gap-6 lg:grid-cols-[1.4fr_1fr]">
           <div>
-            <p className="mb-3 text-sm font-medium text-slate-600 dark:text-slate-300">
-              Seleção múltipla de funcionários
-            </p>
+            <p className="mb-3 text-sm font-medium text-slate-600">Seleção múltipla de funcionários</p>
             <div className="grid gap-3 md:grid-cols-2">
               {collaborators.map((collaborator) => (
                 <label
                   key={collaborator.id}
-                  className="flex items-center gap-3 rounded-2xl border border-slate-200 bg-white p-4 dark:border-slate-800 dark:bg-slate-950"
+                  className="flex items-center gap-3 rounded-2xl border border-white/65 bg-white/72 p-4 shadow-[0_14px_28px_-24px_rgba(74,79,87,0.18)] backdrop-blur-xl"
                 >
                   <input
                     type="checkbox"
@@ -41,10 +39,8 @@ export function ScheduleEditPage() {
                     onChange={() => toggleCollaborator(collaborator.id)}
                   />
                   <div>
-                    <p className="text-sm font-semibold text-slate-800 dark:text-slate-100">
-                      {collaborator.name}
-                    </p>
-                    <p className="text-xs text-slate-500 dark:text-slate-400">{collaborator.region}</p>
+                    <p className="text-sm font-semibold text-slate-800">{collaborator.name}</p>
+                    <p className="text-xs text-slate-500">{collaborator.region}</p>
                   </div>
                 </label>
               ))}
@@ -66,7 +62,10 @@ export function ScheduleEditPage() {
               </Select>
             </Field>
             <Field label="Status a aplicar">
-              <Select value={selectedStatus} onChange={(e) => setSelectedStatus(e.target.value as typeof selectedStatus)}>
+              <Select
+                value={selectedStatus}
+                onChange={(e) => setSelectedStatus(e.target.value as typeof selectedStatus)}
+              >
                 {scheduleStatuses.map((status) => (
                   <option key={status} value={status}>
                     {status}
@@ -80,10 +79,8 @@ export function ScheduleEditPage() {
       </Card>
 
       <Card title="Resumo da operação" description="Pré-visualização simples da atualização em lote.">
-        <div className="space-y-3 text-sm text-slate-600 dark:text-slate-300">
-          <p>
-            Colaboradores selecionados: {selectedNames.length > 0 ? selectedNames.join(', ') : 'nenhum'}
-          </p>
+        <div className="space-y-3 text-sm text-slate-600">
+          <p>Colaboradores selecionados: {selectedNames.length > 0 ? selectedNames.join(', ') : 'nenhum'}</p>
           <p>Data escolhida: {selectedDate || 'não selecionada'}</p>
           <p>Status definido: {selectedStatus}</p>
         </div>

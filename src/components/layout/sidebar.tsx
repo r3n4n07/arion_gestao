@@ -5,7 +5,6 @@ const navigation = [
   { to: '/', label: 'Dashboard' },
   { to: '/clientes', label: 'Clientes' },
   { to: '/escala', label: 'Escala' },
-  { to: '/escala/editar', label: 'Editar escala' },
   { to: '/ips', label: 'IPs' },
   { to: '/usuarios', label: 'Usuários' },
   { to: '/equipamentos', label: 'Equipamentos' },
@@ -53,6 +52,7 @@ export function Sidebar({ open, collapsed, onClose, onToggleCollapse }: SidebarP
       >
         <div className="pointer-events-none absolute inset-0">
           <div className="absolute -left-8 top-0 h-48 w-48 rounded-full bg-aqua-500/10 blur-3xl" />
+          <div className="absolute left-0 right-0 top-0 h-20 bg-aqua-500/6" />
           <div className="absolute bottom-10 left-1/2 h-40 w-40 -translate-x-1/2 rounded-full bg-ember-500/6 blur-3xl" />
         </div>
 
@@ -78,12 +78,14 @@ export function Sidebar({ open, collapsed, onClose, onToggleCollapse }: SidebarP
             >
               <CollapseIcon collapsed={collapsed} />
             </button>
-            <button
-              className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/70 bg-white/72 text-slate-700 shadow-[0_18px_36px_-26px_rgba(74,79,87,0.24)] backdrop-blur-xl transition hover:bg-white md:hidden"
-              onClick={onClose}
-            >
-              x
-            </button>
+            {open && (
+              <button
+                className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/70 bg-white/72 text-slate-700 shadow-[0_18px_36px_-26px_rgba(74,79,87,0.24)] backdrop-blur-xl transition hover:bg-white md:hidden"
+                onClick={onClose}
+              >
+                x
+              </button>
+            )}
           </div>
         </div>
 
