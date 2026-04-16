@@ -9,29 +9,33 @@ export function DonutChart({ allocated, free }: DonutChartProps) {
 
   return (
     <div className="flex flex-col items-center gap-6 lg:flex-row lg:justify-between">
-      <div
-        className="relative h-52 w-52 rounded-full p-2"
-        style={{
-          background: `conic-gradient(rgba(16,201,160,0.28) 0% 8%, #10C9A0 8% ${allocatedPercent}%, rgba(255,255,255,0.2) ${allocatedPercent}% 100%)`,
-        }}
-      >
-        <div className="absolute inset-6 flex flex-col items-center justify-center rounded-full border border-white/20 bg-white/12 backdrop-blur-xl">
-          <span className="text-4xl font-semibold text-white">{total}</span>
-          <span className="text-sm text-white/70">IPs totais</span>
+      <div className="relative flex items-center justify-center">
+        <div
+          className="relative h-52 w-52 rounded-full"
+          style={{
+            background: `conic-gradient(rgba(16,201,160,0.7) 0% ${allocatedPercent}%, rgba(16,201,160,0.14) ${allocatedPercent}% 100%)`,
+          }}
+        >
+          <div className="absolute inset-7 rounded-full bg-[#f3fcf8]" />
+          <div className="absolute inset-0 flex flex-col items-center justify-center">
+            <span className="text-4xl font-semibold text-slate-800">{total}</span>
+            <span className="text-sm text-slate-500">IPs totais</span>
+          </div>
         </div>
       </div>
+
       <div className="grid w-full gap-3">
-        <div className="rounded-[1.5rem] border border-white/20 bg-white/10 px-4 py-4 backdrop-blur-xl">
-          <p className="text-sm text-white/70">Alocados</p>
-          <p className="text-2xl font-semibold text-white">{allocated}</p>
+        <div className="rounded-[1.5rem] border border-orange-300 bg-white px-4 py-4 shadow-[0_16px_28px_-24px_rgba(74,79,87,0.16)]">
+          <p className="text-sm text-slate-500">Alocados</p>
+          <p className="text-2xl font-semibold text-slate-800">{allocated}</p>
         </div>
-        <div className="rounded-[1.5rem] border border-white/20 bg-white/10 px-4 py-4 backdrop-blur-xl">
-          <p className="text-sm text-white/70">Livres</p>
-          <p className="text-2xl font-semibold text-white">{free}</p>
+        <div className="rounded-[1.5rem] border border-orange-300 bg-[#f3fcf8] px-4 py-4 shadow-[0_16px_28px_-24px_rgba(74,79,87,0.12)]">
+          <p className="text-sm text-slate-500">Livres</p>
+          <p className="text-2xl font-semibold text-slate-800">{free}</p>
         </div>
-        <div className="rounded-[1.5rem] border border-white/20 bg-white/10 px-4 py-4 backdrop-blur-xl">
-          <p className="text-sm text-white/70">Uso atual</p>
-          <p className="text-2xl font-semibold text-white">{allocatedPercent}%</p>
+        <div className="rounded-[1.5rem] border border-orange-300 bg-white px-4 py-4 shadow-[0_16px_28px_-24px_rgba(74,79,87,0.16)]">
+          <p className="text-sm text-slate-500">Uso atual</p>
+          <p className="text-2xl font-semibold text-slate-800">{allocatedPercent}%</p>
         </div>
       </div>
     </div>

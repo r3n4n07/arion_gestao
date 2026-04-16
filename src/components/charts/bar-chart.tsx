@@ -9,8 +9,11 @@ export function BarChart({ data }: BarChartProps) {
     <div className="overflow-x-auto pb-2">
       <div className="flex min-w-[880px] gap-5 px-1">
         {data.map((item, index) => (
-          <div key={item.month} className="flex w-[3.35rem] flex-none flex-col items-center gap-3">
-            <div className="relative flex h-72 w-full items-end overflow-hidden rounded-[1.6rem] bg-white/10 px-[3px] pb-[3px]">
+          <div
+            key={item.month}
+            className="flex w-[3.35rem] flex-none flex-col items-center gap-3"
+          >
+            <div className="relative flex h-72 w-full items-end overflow-hidden rounded-[1.6rem] bg-black/20 px-[3px] pb-[3px]">
               <div
                 className="relative z-10 w-full rounded-[1.35rem] bg-aqua-500 shadow-[0_20px_35px_-22px_rgba(16,201,160,0.95)] animate-bar-rise"
                 style={{
@@ -21,8 +24,12 @@ export function BarChart({ data }: BarChartProps) {
               />
             </div>
             <div className="text-center">
-              <p className="text-sm font-semibold text-white">{item.value}</p>
-              <p className="text-xs uppercase tracking-[0.25em] text-white/78">{item.month}</p>
+              <p className="text-sm font-semibold text-slate-800">
+                {item.value}
+              </p>
+              <p className="text-xs uppercase tracking-[0.25em] text-white/78">
+                {item.month}
+              </p>
             </div>
           </div>
         ))}

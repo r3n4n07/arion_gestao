@@ -1,7 +1,7 @@
 import type { PropsWithChildren, ReactNode } from 'react';
 
 export function Table({ children }: PropsWithChildren) {
-  return <div className="overflow-hidden rounded-3xl border border-white/60 bg-white/45 backdrop-blur-xl">{children}</div>;
+  return <div className="overflow-hidden rounded-3xl border border-orange-300 bg-white">{children}</div>;
 }
 
 export function TableElement({ children }: PropsWithChildren) {
@@ -9,7 +9,7 @@ export function TableElement({ children }: PropsWithChildren) {
 }
 
 export function THead({ children }: PropsWithChildren) {
-  return <thead className="bg-white/60">{children}</thead>;
+  return <thead className="bg-slate-50">{children}</thead>;
 }
 
 export function TBody({ children }: PropsWithChildren) {

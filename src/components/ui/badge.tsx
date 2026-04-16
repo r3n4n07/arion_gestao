@@ -14,7 +14,7 @@ export function Badge({ children, variant = 'neutral' }: BadgeProps) {
         variant === 'warning' && 'bg-ember-500/14 text-ember-600',
         variant === 'danger' && 'bg-ember-500/18 text-ember-600',
         variant === 'info' && 'bg-slate-500/12 text-slate-700',
-        variant === 'neutral' && 'bg-white/45 text-slate-600 backdrop-blur-xl',
+        variant === 'neutral' && 'bg-white text-slate-600',
       )}
     >
       {children}

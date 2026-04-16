@@ -20,7 +20,7 @@ export function AppShell() {
           <button
             type="button"
             aria-label="Abrir menu"
-            className="fixed left-4 top-4 z-20 inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/70 bg-white/65 text-slate-700 shadow-soft backdrop-blur-xl transition hover:bg-white/85 md:hidden"
+            className="fixed left-4 top-4 z-20 inline-flex h-12 w-12 items-center justify-center rounded-full border border-orange-300 bg-white text-slate-700 shadow-soft transition hover:bg-slate-50 md:hidden"
             onClick={() => setSidebarOpen(true)}
           >
             =

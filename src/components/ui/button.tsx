@@ -22,8 +22,8 @@ export function Button({
         size === 'md' ? 'h-11 px-4 text-sm' : 'h-9 px-3 text-xs',
         variant === 'primary' && 'bg-aqua-500 text-white shadow-soft hover:bg-aqua-600',
         variant === 'secondary' &&
-          'border border-white/60 bg-white/55 text-slate-700 backdrop-blur-xl hover:border-aqua-500/45 hover:bg-white/75 hover:text-aqua-700',
-        variant === 'ghost' && 'bg-transparent text-slate-600 hover:bg-white/50',
+          'border border-orange-300 bg-white text-slate-700 hover:border-aqua-500 hover:bg-slate-50 hover:text-aqua-700',
+        variant === 'ghost' && 'bg-transparent text-slate-600 hover:bg-slate-100',
         variant === 'danger' && 'bg-ember-500 text-white hover:bg-ember-600',
         className,
       )}

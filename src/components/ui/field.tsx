@@ -20,7 +20,7 @@ export function Input(props: InputHTMLAttributes<HTMLInputElement>) {
     <input
       {...props}
       className={cn(
-        'h-11 rounded-2xl border border-white/65 bg-white/72 px-4 text-sm text-slate-800 outline-none backdrop-blur-xl transition focus:border-aqua-500',
+        'h-11 rounded-2xl border border-orange-300 bg-white px-4 text-sm text-slate-800 outline-none transition focus:border-aqua-500',
         props.className,
       )}
     />
@@ -32,7 +32,7 @@ export function Select(props: SelectHTMLAttributes<HTMLSelectElement>) {
     <select
       {...props}
       className={cn(
-        'h-11 rounded-2xl border border-white/65 bg-white/72 px-4 text-sm text-slate-800 outline-none backdrop-blur-xl transition focus:border-aqua-500',
+        'h-11 rounded-2xl border border-orange-300 bg-white px-4 text-sm text-slate-800 outline-none transition focus:border-aqua-500',
         props.className,
       )}
     />
@@ -44,7 +44,7 @@ export function Textarea(props: TextareaHTMLAttributes<HTMLTextAreaElement>) {
     <textarea
       {...props}
       className={cn(
-        'min-h-28 rounded-2xl border border-white/65 bg-white/72 px-4 py-3 text-sm text-slate-800 outline-none backdrop-blur-xl transition focus:border-aqua-500',
+        'min-h-28 rounded-2xl border border-orange-300 bg-white px-4 py-3 text-sm text-slate-800 outline-none transition focus:border-aqua-500',
         props.className,
       )}
     />

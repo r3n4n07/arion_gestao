@@ -79,7 +79,7 @@ export function SchedulePage() {
   return (
     <div className="space-y-6">
       <div className="sticky top-4 z-10">
-        <Card className="border-white/75 bg-white/76 shadow-[0_24px_48px_-30px_rgba(74,79,87,0.28)]">
+        <Card className="border-orange-300 bg-white shadow-[0_24px_48px_-30px_rgba(74,79,87,0.28)]">
           <div className="flex flex-col gap-4 xl:flex-row xl:items-end xl:justify-between">
             <div className="grid gap-4 md:grid-cols-3">
               <label className="flex flex-col gap-2">
@@ -91,7 +91,7 @@ export function SchedulePage() {
                     type="date"
                     value={selectedDate}
                     onChange={(event) => setSelectedDate(event.target.value)}
-                    className="h-12 rounded-2xl border border-white/70 bg-white/78 px-4 text-sm text-slate-700 shadow-[0_14px_28px_-22px_rgba(74,79,87,0.18)] outline-none backdrop-blur-xl transition focus:border-aqua-500"
+                    className="h-12 rounded-2xl border border-orange-300 bg-white px-4 text-sm text-slate-700 shadow-[0_14px_28px_-22px_rgba(74,79,87,0.18)] outline-none transition focus:border-aqua-500"
                   />
                 </div>
               </label>
@@ -107,7 +107,7 @@ export function SchedulePage() {
                       event.target.value as "Todos" | ScheduleStatus,
                     )
                   }
-                  className="h-12 rounded-2xl border border-white/70 bg-white/78 px-4 text-sm text-slate-700 shadow-[0_14px_28px_-22px_rgba(74,79,87,0.18)] outline-none backdrop-blur-xl transition focus:border-aqua-500"
+                  className="h-12 rounded-2xl border border-orange-300 bg-white px-4 text-sm text-slate-700 shadow-[0_14px_28px_-22px_rgba(74,79,87,0.18)] outline-none transition focus:border-aqua-500"
                 >
                   <option value="Todos">Todos</option>
                   {scheduleStatuses.map((status) => (
@@ -129,7 +129,7 @@ export function SchedulePage() {
                       event.target.value as "Todas" | CollaboratorRegion,
                     )
                   }
-                  className="h-12 rounded-2xl border border-white/70 bg-white/78 px-4 text-sm text-slate-700 shadow-[0_14px_28px_-22px_rgba(74,79,87,0.18)] outline-none backdrop-blur-xl transition focus:border-aqua-500"
+                  className="h-12 rounded-2xl border border-orange-300 bg-white px-4 text-sm text-slate-700 shadow-[0_14px_28px_-22px_rgba(74,79,87,0.18)] outline-none transition focus:border-aqua-500"
                 >
                   <option value="Todas">Todas</option>
                   {scheduleRegions.map((region) => (
@@ -142,7 +142,7 @@ export function SchedulePage() {
             </div>
 
             <div className="flex items-center gap-3">
-              <div className="rounded-2xl border border-white/70 bg-white/78 px-4 py-3 text-sm text-slate-600 shadow-[0_14px_28px_-22px_rgba(74,79,87,0.18)] backdrop-blur-xl">
+              <div className="rounded-2xl border border-orange-300 bg-white px-4 py-3 text-sm text-slate-600 shadow-[0_14px_28px_-22px_rgba(74,79,87,0.18)]">
                 Visualizando {formatDate(selectedDate)}
               </div>
               <Button onClick={() => navigate("/escala/editar")}>
@@ -159,7 +159,7 @@ export function SchedulePage() {
             title="Nenhum colaborador encontrado"
             description="Ajuste os filtros para visualizar a escala desejada."
           >
-            <div className="rounded-[1.5rem] border border-dashed border-white/75 bg-white/62 px-6 py-10 text-center text-sm text-slate-500">
+            <div className="rounded-[1.5rem] border border-dashed border-orange-300 bg-white px-6 py-10 text-center text-sm text-slate-500">
               Nenhum colaborador corresponde aos filtros selecionados.
             </div>
           </Card>
@@ -169,11 +169,11 @@ export function SchedulePage() {
               key={supervisor}
               title={supervisor}
               description={`${items.length} colaborador(es) para ${formatDate(selectedDate)}.`}
-              className="border-[#ffb41ec2] border-b-[6px] bg-white/72 shadow-[0_24px_48px_-30px_rgba(74,79,87,0.26)]"
+              className="!border-orange-300 border-b-[6px] bg-white shadow-[0_24px_48px_-30px_rgba(74,79,87,0.26)]"
             >
               <div className="overflow-x-auto">
                 <div className="min-w-[720px]">
-                  <div className="grid grid-cols-[1.4fr_0.8fr_0.8fr] gap-3  bg-white/84 px-4 py-3 text-xs font-semibold uppercase tracking-[0.2em] text-slate-500 shadow-[0_14px_28px_-24px_rgba(74,79,87,0.18)]">
+                  <div className="grid grid-cols-[1.4fr_0.8fr_0.8fr] gap-3 bg-white px-4 py-3 text-xs font-semibold uppercase tracking-[0.2em] text-slate-500 shadow-[0_14px_28px_-24px_rgba(74,79,87,0.18)]">
                     <span>Nome</span>
                     <span>Status</span>
                     <span>Turno</span>
@@ -181,7 +181,7 @@ export function SchedulePage() {
                   <div className="mt-3 space-y-0">
                     {items.map((collaborator, index) => (
                       <div key={collaborator.id}>
-                        <div className="grid grid-cols-[1.4fr_0.8fr_0.8fr] gap-3 rounded-[0] bg-white/78 px-4 py-4 text-sm text-slate-600 shadow-[0_16px_30px_-24px_rgba(74,79,87,0.18)] backdrop-blur-xl">
+                        <div className="grid grid-cols-[1.4fr_0.8fr_0.8fr] gap-3 rounded-[0] bg-white px-4 py-4 text-sm text-slate-600 shadow-[0_16px_30px_-24px_rgba(74,79,87,0.18)]">
                           <div>
                             <p className="font-semibold text-slate-800">
                               {collaborator.name}
